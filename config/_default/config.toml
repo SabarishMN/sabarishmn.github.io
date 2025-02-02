@@ -1,0 +1,23 @@
+# -- Site Configuration --
+# Refer to the theme docs for more details about each of these parameters.
+# https://jpanther.github.io/congo/docs/getting-started/
+
+baseURL = "https://socrabytes.github.io/"
+defaultContentLanguage = "en"
+theme = "congo"
+
+enableRobotsTXT = true
+[pagination]
+pagerSize = 10
+summaryLength = 0
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[params]
+  custom_css = "custom.css" 
+  showWordCount = true
+  showViews = true
+
+[[imports]]
+path = "github.com/jpanther/congo/v2"
