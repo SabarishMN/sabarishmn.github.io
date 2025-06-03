@@ -37,7 +37,7 @@
 
 [[main]]
   name = "CV"
-  url = "https://drive.google.com/file/d/1h36tXvIER9gzvJS3gfbft9--kD0CARSb/view?usp=sharing"
+  url = "https://github.com/SabarishMN/CV/blob/main/SabarishMN_feb.pdf"
   weight = 30
   [main.params]
     target = "_blank"
