@@ -37,7 +37,7 @@
 
 [[main]]
   name = "CV"
-  url = "https://sabarishmn.github.io/SabarishMN_feb.pdf"
+  url = "https://sabarishmn.github.io/CV.pdf"
   weight = 30
   [main.params]
     target = "_blank"
