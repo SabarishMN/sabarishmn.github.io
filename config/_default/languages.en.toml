@@ -13,7 +13,7 @@ copyright = "© 2024 Sabarish Muthumani " #| [Terms](legal/terms-n-conditions/) 
 
 [params.author]   
   name = "Sabarish Muthumani"
-  image = "img/self.jpg"
+  image = "img/self.png"
   headline = "Simplify to Amplify | Engineering for Impact"
   bio = "Life runs on Code 🚀"
   links = [
