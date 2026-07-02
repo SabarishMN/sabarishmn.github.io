@@ -1,0 +1,19 @@
+version: 2
+updates:
+  # 1. Track Node/npm dependencies (Tailwind, PostCSS, or embedded theme assets)
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+
+  # 2. Track Go Modules (If you installed the Congo theme as a Hugo Module)
+  - package-ecosystem: "gomod"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+
+  # 3. Keep your GitHub Action workflows secure and updated
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
