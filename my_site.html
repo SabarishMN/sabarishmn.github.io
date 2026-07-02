@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabarish Muthumani | AI Infrastructure & Systems Architect</title>
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#070a13',
+                        terminal: '#0f1626',
+                        cyanGlow: '#00f0ff',
+                        emeraldGlow: '#39ff14',
+                        amberGlow: '#ffaa00',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #070a13; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        .glow-cyan { text-shadow: 0 0 10px rgba(0, 240, 255, 0.5); }
+        .glow-border:hover { box-shadow: 0 0 20px rgba(0, 240, 255, 0.2); border-color: rgba(0, 240, 255, 0.4); }
+    </style>
+</head>
+<body class="text-slate-200 antialiased selection:bg-cyanGlow selection:text-black">
+
+    <!-- Global Node Telemetry Ticker -->
+    <div class="border-b border-slate-800/60 bg-slate-950/80 backdrop-blur-md sticky top-0 z-50 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap justify-between items-center gap-3">
+            <div class="flex items-center gap-3 font-mono text-xs">
+                <span class="flex h-2 w-2 relative">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emeraldGlow opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emeraldGlow"></span>
+                </span>
+                <span class="text-slate-400">CLUSTER_NODE:</span>
+                <span class="text-emeraldGlow font-bold">READY // SAN JOSE, CA</span>
+            </div>
+            <div class="flex items-center gap-6 text-xs sm:text-sm font-mono text-slate-400">
+                <a href="#matrix" class="hover:text-cyanGlow transition-colors">.telemetry()</a>
+                <a href="#cluster-history" class="hover:text-cyanGlow transition-colors">.runtime_log()</a>
+                <a href="#repos" class="hover:text-cyanGlow transition-colors">.repositories()</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Dashboard Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16">
+        
+        <!-- Hero Section / Control Deck -->
+        <header class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center bg-terminal/40 border border-slate-800/80 rounded-2xl p-6 sm:p-8 relative overflow-hidden backdrop-blur-sm">
+            <div class="absolute top-0 right-0 p-3 text-[9px] font-mono text-slate-600 tracking-widest select-none">HPC_PROG_V4.26</div>
+            
+            <!-- Column 1 & 2: Bio & Hard Metrics -->
+            <div class="lg:col-span-2 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyanGlow/20 bg-cyanGlow/5 font-mono text-xs text-cyanGlow">
+                    <i data-lucide="cpu" class="w-3.5 h-3.5 animate-spin [animation-duration:5s]"></i> AI Compute & Systems Architect
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white">
+                    Sabarish <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyanGlow via-teal-400 to-indigo-400 glow-cyan">Muthumani</span>
+                </h1>
+                <p class="text-base sm:text-lg text-slate-400 max-w-2xl leading-relaxed">
+                    Scaling high-volume, bare-metal AI training infrastructure[cite: 2]. Expert in debugging low-level kernel routines, resolving multi-node interconnect bottlenecks, and hardware acceleration bring-up.
+                </p>
+
+                <!-- High Impact Hardware Stats Matrix -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2 font-mono">
+                    <div class="p-3.5 rounded-xl bg-slate-950/80 border border-slate-800">
+                        <div class="text-[10px] text-slate-500 tracking-wider">HPC PROVISIONING</div>
+                        <div class="text-xl sm:text-2xl font-bold text-cyanGlow mt-1">+50%</div>
+                        <div class="text-[9px] text-slate-400 mt-0.5">Speedup Time[cite: 2]</div>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-slate-950/80 border border-slate-800">
+                        <div class="text-[10px] text-slate-500 tracking-wider">INFRA READINESS</div>
+                        <div class="text-xl sm:text-2xl font-bold text-emeraldGlow mt-1">+30%</div>
+                        <div class="text-[9px] text-slate-400 mt-0.5">Efficiency Gain[cite: 2]</div>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-slate-950/80 border border-slate-800">
+                        <div class="text-[10px] text-slate-500 tracking-wider">DOWNTIME SCALE</div>
+                        <div class="text-xl sm:text-2xl font-bold text-amberGlow mt-1">-30%</div>
+                        <div class="text-[9px] text-slate-400 mt-0.5">RAID/PCIe Tuning[cite: 4]</div>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-slate-950/80 border border-slate-800">
+                        <div class="text-[10px] text-slate-500 tracking-wider">ANOMALY MTTD</div>
+                        <div class="text-xl sm:text-2xl font-bold text-indigo-400 mt-1">-25%</div>
+                        <div class="text-[9px] text-slate-400 mt-0.5">Loki/Grafana Pipeline[cite: 4]</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 3: The Pictorial Identity Unit -->
+            <div class="flex flex-col items-center justify-center space-y-4">
+                <!-- Glowing Image Holder Frame -->
+                <div class="relative w-48 h-48 sm:w-56 sm:h-56 rounded-2xl border-2 border-slate-800 bg-slate-950 flex items-center justify-center overflow-hidden group shadow-2xl transition-all glow-border">
+                    <!-- Top Left Neon Accent Edge -->
+                    <div class="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-cyanGlow"></div>
+                    <!-- Bottom Right Neon Accent Edge -->
+                    <div class="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-cyanGlow"></div>
+                    
+                    <!-- USER IMAGE CONTAINER -->
+                    <!-- Replace the svg icon inside below with your image tag when ready: 
+                         <img src="your-picture-file.jpg" alt="Sabarish Muthumani" class="w-full h-full object-cover"> -->
+                    <div class="text-center p-4 transition-transform group-hover:scale-105 duration-300">
+                        <i data-lucide="user" class="w-16 h-16 text-slate-600 mx-auto mb-2 group-hover:text-cyanGlow transition-colors"></i>
+                        <span class="font-mono text-[10px] text-slate-500 block">[ PLACE IMAGE HERE ]</span>
+                    </div>
+                    
+                    <!-- Overlay Telemetry Lines -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent opacity-40 pointer-events-none"></div>
+                </div>
+
+                <!-- Live Identity Badging Array -->
+                <div class="w-full font-mono text-xs space-y-2 bg-slate-950/90 border border-slate-800 p-4 rounded-xl">
+                    <div class="flex items-center gap-2.5"><i data-lucide="mail" class="w-4 h-4 text-cyanGlow"></i> <a href="mailto:sabarishm@vt.edu" class="hover:underline text-slate-300 truncate">sabarishm@vt.edu</a></div>
+                    <div class="flex items-center gap-2.5"><i data-lucide="linkedin" class="w-4 h-4 text-cyanGlow"></i> <a href="https://linkedin.com/in/sabarishmn" target="_blank" class="hover:underline text-slate-300">linkedin.com/in/sabarishmn</a></div>
+                    <div class="flex items-center gap-2.5"><i data-lucide="github" class="w-4 h-4 text-cyanGlow"></i> <a href="https://sabarishmn.github.io" target="_blank" class="hover:underline text-slate-300">sabarishmn.github.io</a></div>
+                    <div class="flex items-center gap-2.5"><i data-lucide="phone" class="w-4 h-4 text-slate-500"></i> <span class="text-slate-400">(540) 605-0766</span></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Technical Telemetry Matrix -->
+        <section id="matrix" class="space-y-6">
+            <h2 class="text-sm font-mono font-bold tracking-widest text-slate-500 uppercase flex items-center gap-2">
+                <i data-lucide="activity" class="w-4 h-4 text-cyanGlow"></i> [SYS_MAP_01] Comprehensive Telemetry Matrix
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                
+                <div class="p-5 rounded-xl bg-terminal/40 border border-slate-800/80 space-y-3 hover:border-slate-700 transition-all group">
+                    <div class="flex items-center gap-2.5">
+                        <div class="p-2 rounded bg-cyanGlow/5 text-cyanGlow"><i data-lucide="server" class="w-4 h-4"></i></div>
+                        <h3 class="font-bold text-white text-sm tracking-wide">AI Compute & HPC</h3>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">NVIDIA GB200, H100, Grace Hopper ARM CPU, DGX/HGX Supercomputers, Cluster Validation, Bare-Metal Provisioning, Performance Benchmarking[cite: 2, 3].</p>
+                </div>
+
+                <div class="p-5 rounded-xl bg-terminal/40 border border-slate-800/80 space-y-3 hover:border-slate-700 transition-all group">
+                    <div class="flex items-center gap-2.5">
+                        <div class="p-2 rounded bg-cyanGlow/5 text-cyanGlow"><i data-lucide="network" class="w-4 h-4"></i></div>
+                        <h3 class="font-bold text-white text-sm tracking-wide">Networking & Fabric</h3>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">InfiniBand Fabric, RoCE, High-Speed Ethernet, NVLink, NVSwitch, PCIe Topology, NUMA, Network Tuning, VLANs[cite: 2, 3, 4].</p>
+                </div>
+
+                <div class="p-5 rounded-xl bg-terminal/40 border border-slate-800/80 space-y-3 hover:border-slate-700 transition-all group">
+                    <div class="flex items-center gap-2.5">
+                        <div class="p-2 rounded bg-cyanGlow/5 text-cyanGlow"><i data-lucide="terminal" class="w-4 h-4"></i></div>
+                        <h3 class="font-bold text-white text-sm tracking-wide">Orchestration & Diagnostics</h3>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">SLURM, Kubernetes, Docker, NVIDIA DCGM, NCCL Tests, HPL, MLPerf, PromQL, Grafana, Loki, Log Tracing[cite: 2, 3, 4].</p>
+                </div>
+
+                <div class="p-5 rounded-xl bg-terminal/40 border border-slate-800/80 space-y-3 hover:border-slate-700 transition-all group">
+                    <div class="flex items-center gap-2.5">
+                        <div class="p-2 rounded bg-cyanGlow/5 text-cyanGlow"><i data-lucide="binary" class="w-4 h-4"></i></div>
+                        <h3 class="font-bold text-white text-sm tracking-wide">Systems & Automation</h3>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">C/C++, Python, Bash, Ansible Automation, Linux Kernel Debugging, Lustre Parallel Storage, GPFS, ZFS, RAID Systems[cite: 2, 3, 4].</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Chronological Execution Logs (Work Experience) -->
+        <section id="cluster-history" class="space-y-6">
+            <h2 class="text-sm font-mono font-bold tracking-widest text-slate-500 uppercase flex items-center gap-2">
+                <i data-lucide="database" class="w-4 h-4 text-cyanGlow"></i> [SYS_LOG_02] Infrastructure & Architecture History
+            </h2>
+            <div class="space-y-4">
+                
+                <!-- Consolidation Block 1: VT SysAdmin -->
+                <div class="p-6 rounded-xl bg-terminal/30 border border-slate-800/80 grid grid-cols-1 lg:grid-cols-4 gap-6 relative group hover:border-slate-700/80 transition-all">
+                    <div class="space-y-1.5">
+                        <div class="text-xs font-mono text-cyanGlow tracking-widest">MAY 2025 – PRESENT</div>
+                        <h3 class="text-xl font-bold text-white tracking-tight">Virginia Tech</h3>
+                        <p class="text-sm text-slate-400 font-mono">System Administrator</p>
+                        <span class="inline-block text-[10px] font-mono px-2 py-0.5 rounded bg-cyanGlow/10 border border-cyanGlow/20 text-cyanGlow">Remote US</span>
+                    </div>
+                    <div class="lg:col-span-3 space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 font-mono text-[11px] bg-slate-950/60 p-3 rounded-lg border border-slate-800 text-slate-400">
+                            <div><span class="text-slate-500">DEPLOY_FABRIC:</span> NVIDIA H100, GB200[cite: 3]</div>
+                            <div><span class="text-slate-500">DIAG_STACK:</span> DCGM, UFM, NCCL[cite: 3]</div>
+                            <div><div><span class="text-slate-500">MONITOR_CORE:</span> Prometheus, Grafana, Loki[cite: 4]</div></div>
+                            <div><span class="text-slate-500">AUTOMATION:</span> Ansible, Bash, Python[cite: 2]</div>
+                        </div>
+                        <ul class="space-y-2.5 text-sm text-slate-400">
+                            <li class="flex gap-2"><span class="text-cyanGlow font-mono">▹</span> <strong class="text-slate-200">Bare-Metal AI Acceleration:</strong> Built and tuned distributed Hyperscaler-class AI infrastructure running NVIDIA H100 and GB200 GPU clusters, boosting deep learning inference optimization by 25% across multi-node environments[cite: 2, 3].</li>
+                            <li class="flex gap-2"><span class="text-cyanGlow font-mono">▹</span> <strong class="text-slate-200">Interconnect & Topology Analysis:</strong> Diagnosed and fixed multi-GPU configuration barriers using NVLink, NVSwitch, and PCIe topology mapping, clearing fabric path congestion metrics by 15% via NCCL tuning[cite: 3, 4].</li>
+                            <li class="flex gap-2"><span class="text-cyanGlow font-mono">▹</span> <strong class="text-slate-200">Telemetry Pipelines & Automation:</strong> Deployed diagnostic alert loops (Prometheus, Grafana, Loki) tracking real-time PCIe status, power variations, and disk health metrics, dropping Mean Time to Detection (MTTD) benchmarks by 25%[cite: 3, 4].</li>
+                            <li class="flex gap-2"><span class="text-cyanGlow font-mono">▹</span> <strong class="text-slate-200">Root-Cause Infrastructure Remediation:</strong> Fixed low-level ARM CPU and PCIe controller errors while managing secure device recovery and out-of-band remote administration via IPMI, Redfish, and BMC logs[cite: 2, 3].</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Consolidation Block 2: VT Graduate Assistant -->
+                <div class="p-6 rounded-xl bg-terminal/30 border border-slate-800/80 grid grid-cols-1 lg:grid-cols-4 gap-6 relative group hover:border-slate-700/80 transition-all">
+                    <div class="space-y-1.5">
+                        <div class="text-xs font-mono text-cyanGlow tracking-widest">AUG 2024 – MAY 2025</div>
+                        <h3 class="text-xl font-bold text-white tracking-tight">Virginia Tech</h3>
+                        <p class="text-sm text-slate-400 font-mono">Graduate Assistant</p>
+                        <span class="inline-block text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-400">Blacksburg, VA</span>
+                    </div>
+                    <div class="lg:col-span-3 space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 font-mono text-[11px] bg-slate-950/60 p-3 rounded-lg border border-slate-800 text-slate-400">
+                            <div><span class="text-slate-500">ORCHESTRATION:</span> SLURM, Kubernetes[cite: 2]</div>
+                            <div><span class="text-slate-500">STORAGE_NET:</span> Lustre, InfiniBand Fabric[cite: 2, 3]</div>
+                        </div>
+                        <ul class="space-y-2.5 text-sm text-slate-400">
+                            <li class="flex gap-2"><span class="text-cyanGlow font-mono">▹</span> <strong class="text-slate-200">HPC Datacenter Expansion:</strong> Led performance configurations and deployment loops for cluster nodes, successfully transitioning pilot infrastructure to an active multi-tenant production datacenter deployment[cite: 3].</li>
+                            <li class="flex gap-2"><span class="text-cyanGlow font-mono">▹</span> <strong class="text-slate-200">Diagnostic Scripting & Logging:</strong> Isolated thermal faults and out-of-band anomalies by debugging core kernel crash dumps, building specialized host-to-device tracking frameworks processing 50+ GB/day of runtime logs[cite: 3, 4].</li>
+                            <li class="flex gap-2"><span class="text-cyanGlow font-mono">▹</span> <strong class="text-slate-200">Orchestrated Resource Provisioning:</strong> Deployed Linux nodes managed via Kubernetes and SLURM workload schedulers, configuring ultra-high-speed Lustre parallel filesystems and distributed environments[cite: 2, 3].</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Consolidation Block 3: Cisco Software Engineer -->
+                <div class="p-6 rounded-xl bg-terminal/30 border border-slate-800/80 grid grid-cols-1 lg:grid-cols-4 gap-6 relative group hover:border-slate-700/80 transition-all">
+                    <div class="space-y-1.5">
+                        <div class="text-xs font-mono text-slate-500 tracking-widest">APR 2022 – AUG 2023</div>
+                        <h3 class="text-xl font-bold text-white tracking-tight">Cisco Systems, Inc.</h3>
+                        <p class="text-sm text-slate-400 font-mono">Software Engineer</p>
+                        <span class="inline-block text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-400">Bangalore, IN</span>
+                    </div>
+                    <div class="lg:col-span-3 space-y-4">
+                        <ul class="space-y-2.5 text-sm text-slate-400">
+                            <li class="flex gap-2"><span class="text-cyanGlow font-mono">▹</span> <strong class="text-slate-200">Go-To-Market Technical Alignment:</strong> Collaborated with hyperscaler architecture contacts and OEM platform engineering teams to scale core product release lines, boosting global contract engineering wins by 15%[cite: 3].</li>
+                            <li class="flex gap-2"><span class="text-cyanGlow font-mono">▹</span> <strong class="text-slate-200">Low-Level Stack Diagnostics:</strong> Developed high-performance backend modules in C/C++, troubleshooting low-level networking constraints and embedded stack behaviors via rigorous multi-threaded performance testing[cite: 3, 4].</li>
+                            <li class="flex gap-2"><span class="text-cyanGlow font-mono">▹</span> <strong class="text-slate-200">Telemetry Observability:</strong> Patched network packet capture pipelines, slashing system integration friction loops by 20% while providing production-ready reference maps for key customer implementations[cite: 3].</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Consolidation Block 4: NPCI Associate Blockchain -->
+                <div class="p-6 rounded-xl bg-terminal/30 border border-slate-800/80 grid grid-cols-1 lg:grid-cols-4 gap-6 relative group hover:border-slate-700/80 transition-all">
+                    <div class="space-y-1.5">
+                        <div class="text-xs font-mono text-slate-500 tracking-widest">MAY 2020 – MAR 2022</div>
+                        <h3 class="text-xl font-bold text-white tracking-tight">NPCI</h3>
+                        <p class="text-sm text-slate-400 font-mono">Associate Blockchain</p>
+                        <span class="inline-block text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-400">Hyderabad, IN</span>
+                    </div>
+                    <div class="lg:col-span-3 space-y-4">
+                        <ul class="space-y-2.5 text-sm text-slate-400">
+                            <li class="flex gap-2"><span class="text-cyanGlow font-mono">▹</span> <strong class="text-slate-200">High-Availability Ledger Isolation:</strong> Crafted reliable distributed ledgers across physical processing nodes, resolving memory-mapping allocations to handle stable high-load transaction traffic lines[cite: 3, 4].</li>
+                            <li class="flex gap-2"><span class="text-cyanGlow font-mono">▹</span> <strong class="text-slate-200">Performance Profiling & Automation:</strong> Engineered custom tracking wrappers in Python and Shell architectures to mitigate critical node drops, reducing high-severity site incidents by 15%[cite: 2, 3].</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Selected Project Repositories -->
+        <section id="repos" class="space-y-6">
+            <h2 class="text-sm font-mono font-bold tracking-widest text-slate-500 uppercase flex items-center gap-2">
+                <i data-lucide="folder-git-2"></i> [SYS_REPO_03] Compiled Application Pipelines
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <div class="p-6 rounded-xl bg-terminal/40 border border-slate-800/80 flex flex-col justify-between space-y-4 hover:border-slate-700 transition-all">
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-start">
+                            <h3 class="font-bold text-white text-base">Custom Work Stealing Scheduler</h3>
+                            <span class="text-[10px] font-mono text-cyanGlow">MAR 2025</span>
+                        </div>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Implemented and profiled custom concurrent work-stealing systems against Java native ForkJoinPool architectures to evaluate micro-scheduling latency drops[cite: 2, 3, 4].
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-1 font-mono text-[9px] text-slate-400">
+                        <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800">Java</span>
+                        <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800">Concurrency</span>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-xl bg-terminal/40 border border-slate-800/80 flex flex-col justify-between space-y-4 hover:border-slate-700 transition-all">
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-start">
+                            <h3 class="font-bold text-white text-base">Live Streaming Framework</h3>
+                            <span class="text-[10px] font-mono text-cyanGlow">DEC 2024</span>
+                        </div>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Built continuous streaming pipeline "Winner's Circle Live," utilizing Kafka event structures, AWS RDS / S3 storage planes, and Apache Airflow pipelines[cite: 2, 3, 4].
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-1 font-mono text-[9px] text-slate-400">
+                        <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800">Kafka</span>
+                        <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800">AWS S3</span>
+                        <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800">Airflow</span>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-xl bg-terminal/40 border border-slate-800/80 flex flex-col justify-between space-y-4 hover:border-slate-700 transition-all">
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-start">
+                            <h3 class="font-bold text-white text-base">Interactive RAG Chatbot</h3>
+                            <span class="text-[10px] font-mono text-cyanGlow">MAY 2024</span>
+                        </div>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Engineered a contextual image retrieval engine integrating Azure AI Document Intelligence, Deepgram streaming parsing, and Groq LLM inference matrices[cite: 2, 3, 4].
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-1 font-mono text-[9px] text-slate-400">
+                        <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800">Azure AI</span>
+                        <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800">Groq</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Academic Node Base -->
+        <section class="space-y-6">
+            <h2 class="text-sm font-mono font-bold tracking-widest text-slate-500 uppercase flex items-center gap-2">
+                <i data-lucide="graduation-cap" class="w-4 h-4 text-cyanGlow"></i> [SYS_EDU_04] Academic Foundations
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="p-5 rounded-xl bg-gradient-to-r from-terminal/40 to-slate-950 border border-slate-800/80 flex justify-between items-center">
+                    <div>
+                        <h3 class="font-bold text-white text-base">Virginia Tech</h3>
+                        <p class="text-xs text-slate-400 mt-0.5">Master of Science in Computer Engineering[cite: 2, 3, 4]</p>
+                    </div>
+                    <span class="font-mono text-xs text-cyanGlow bg-cyanGlow/5 border border-cyanGlow/20 px-2.5 py-1 rounded">2023 – 2025[cite: 2, 3, 4]</span>
+                </div>
+                <div class="p-5 rounded-xl bg-gradient-to-r from-terminal/40 to-slate-950 border border-slate-800/80 flex justify-between items-center">
+                    <div>
+                        <h3 class="font-bold text-white text-base">Amrita Vishwa Vidyapeetham</h3>
+                        <p class="text-xs text-slate-400 mt-0.5">Bachelor of Science in Computer Science & Engineering[cite: 2, 3, 4]</p>
+                    </div>
+                    <span class="font-mono text-xs text-slate-400 bg-slate-900 border border-slate-800 px-2.5 py-1 rounded">2016 – 2020[cite: 2, 3, 4]</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Global Console Footer -->
+    <footer class="border-t border-slate-900 bg-slate-950/60 py-8 text-center text-[11px] font-mono text-slate-600">
+        <p>© 2026 Sabarish Muthumani. All computing arrays operational. Optimized for modern recruiters.</p>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+      lucide.createIcons();
+    </script>
+</body>
+</html>
