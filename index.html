@@ -37,6 +37,7 @@
         .glow-cyan { text-shadow: 0 0 10px rgba(0, 240, 255, 0.5); }
         .glow-border:hover { box-shadow: 0 0 20px rgba(0, 240, 255, 0.2); border-color: rgba(0, 240, 255, 0.4); }
     </style>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><style>@keyframes loop { 0%, 35% { opacity: 1; transform: scale(1); } 45%, 90% { opacity: 0; transform: scale(0.6); } } @keyframes chipLoop { 0%, 35% { opacity: 0; transform: scale(0.6); } 45%, 90% { opacity: 1; transform: scale(1); } } .text-node { font-family: 'JetBrains Mono', monospace; font-weight: 900; fill: %2339ff14; transform-origin: center; animation: loop 5s infinite ease-in-out; } .chip-node { stroke: %2339ff14; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transform-origin: center; animation: chipLoop 5s infinite ease-in-out; }</svg><text x='50%25' y='65%25' font-size='11' text-anchor='middle' class='text-node'>SM</text><g class='chip-node'><rect width='12' height='12' x='6' y='6' rx='1.5'/><rect width='4' height='4' x='10' y='10' rx='0.5'/><path d='M10 1v5M14 1v5M10 18v5M14 18v5M18 10h5M18 14h5M1 10h5M1 14h5'/></g></svg>">
 </head>
 <body class="text-slate-200 antialiased selection:bg-cyanGlow selection:text-black">
 
@@ -49,7 +50,7 @@
                     <span class="relative inline-flex rounded-full h-2 w-2 bg-emeraldGlow"></span>
                 </span>
                 <span class="text-slate-400">CLUSTER_NODE:</span>
-                <span class="text-emeraldGlow font-bold">READY // SANTA CLARA, CA</span>
+                <span class="text-emeraldGlow font-bold">READY // SAN JOSE, CA</span>
             </div>
             <div class="flex items-center gap-6 text-xs sm:text-sm font-mono text-slate-400">
                 <a href="#matrix" class="hover:text-cyanGlow transition-colors">.telemetry()</a>
@@ -125,12 +126,31 @@
                 </div>
 
                 <!-- Live Identity Badging Array -->
-                <div class="w-full font-mono text-xs space-y-2 bg-slate-950/90 border border-slate-800 p-4 rounded-xl">
-                    <div class="flex items-center gap-2.5"><i data-lucide="mail" class="w-4 h-4 text-cyanGlow"></i> <a href="mailto:sabarishm@vt.edu" class="hover:underline text-slate-300 truncate">sabarishm@vt.edu</a></div>
-                    <div class="flex items-center gap-2.5"><i data-lucide="linkedin" class="w-4 h-4 text-cyanGlow"></i> <a href="https://linkedin.com/in/sabarishmn" target="_blank" class="hover:underline text-slate-300">linkedin.com/in/sabarishmn</a></div>
-                    <div class="flex items-center gap-2.5"><i data-lucide="github" class="w-4 h-4 text-cyanGlow"></i> <a href="https://sabarishmn.github.io" target="_blank" class="hover:underline text-slate-300">sabarishmn.github.io</a></div>
-                    <div class="flex items-center gap-2.5"><i data-lucide="phone" class="w-4 h-4 text-slate-500"></i> <span class="text-slate-400">(540) 605-0766</span></div>
-                </div>
+                <div class="w-full font-mono text-xs space-y-3 bg-slate-950/90 border border-slate-800 p-4 rounded-xl">
+    <!-- Email -->
+    <!-- <div class="flex items-center gap-3">
+        <i data-lucide="mail" class="w-4 h-4 text-cyanGlow"></i>
+        <a href="mailto:sabarishm@vt.edu" class="hover:underline text-slate-300 truncate">sabarishm@vt.edu</a>
+    </div> -->
+    
+    <!-- LinkedIn (Direct SVG) -->
+    <div class="flex items-center gap-3">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-cyanGlow"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        <a href="https://linkedin.com/in/sabarishmn" target="_blank" class="hover:underline text-slate-300 truncate">linkedin.com/in/sabarishmn</a>
+    </div>
+    
+    <!-- GitHub (Direct SVG) -->
+    <div class="flex items-center gap-3">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-cyanGlow"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        <a href="https://sabarishmn.github.io" target="_blank" class="hover:underline text-slate-300">sabarishmn.github.io</a>
+    </div>
+    
+    <!-- Phone -->
+    <!-- <div class="flex items-center gap-3">
+        <i data-lucide="phone" class="w-4 h-4 text-slate-500"></i>
+        <span class="text-slate-400">(540) 605-0766</span>
+    </div> -->
+</div>
             </div>
         </header>
 
@@ -350,7 +370,7 @@
 
     <!-- Global Console Footer -->
     <footer class="border-t border-slate-900 bg-slate-950/60 py-8 text-center text-[11px] font-mono text-slate-600">
-        <p>© 2026 Sabarish Muthumani. All computing arrays operational. Optimized for modern recruiters.</p>
+        <p>© 2026 Sabarish Muthumani. All computing arrays operational.</p>
     </footer>
 
     <!-- Initialize Lucide Icons -->
